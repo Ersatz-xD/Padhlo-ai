@@ -1,0 +1,28 @@
+# Node modules
+vite-project/node_modules/
+server/node_modules/
+**/node_modules/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Build files
+vite-project/dist/
+server/dist/
+
+# Environment variables
+vite-project/.env
+vite-project/.env.*
+server/.env
+server/.env.*
+
+# Vite cache
+vite-project/.vite/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# VS Code settings
+.vscode/
