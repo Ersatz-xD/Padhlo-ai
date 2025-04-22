@@ -32,9 +32,7 @@ const RootLayout = () => (
         </div>
 
         <div className='btn'>
-        <button className='signup'>
-          Sign up
-        </button>
+        <button className='signup'>Sign up</button>
         </div>
         
     </nav>
