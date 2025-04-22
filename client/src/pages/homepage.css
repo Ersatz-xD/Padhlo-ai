@@ -124,3 +124,36 @@
   padding-left: 40px;
   padding-top: 35px;
 }
+
+
+.bottom-sec {
+    background-color: #4e76ff;
+    color: #e6f1ff;
+    padding: 3em 2em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2em;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 1em;
+    margin-top: 3em;
+  }
+  
+  .bottom-sec h2, .bottom-sec h3 {
+    color: #e6f1ff;
+  }
+  
+  .bottom-sec a {
+    color: #e6f1ff;
+    text-decoration: none;
+  }
+  
+  .bottom-sec a:hover {
+    text-decoration: underline;
+  }
+  
+  .bottom-sec ul {
+    list-style-type: disc;
+    padding-left: 1.2em;
+  }
+  
