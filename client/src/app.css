@@ -1,62 +1,64 @@
-.navbar{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 1em 7em;
 }
 
-.logo-text{
-    color: #242e4a;
-    font-family: "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: bold;
-    font-size: large;
+.logo-text {
+  color: #242e4a;
+  font-family: "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-size: large;
 }
 
-.logo-icon{
-    width: 28px;
-    color: #4e76ff;
+.logo-icon {
+  width: 28px;
+  color: #4e76ff;
 }
 
-.logo{
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    margin-top: 20px;
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 20px;
 }
 
-.nav-links{
-    display: flex;
-    padding-top: 1em;
-    justify-content: center;
-    align-items: center;
-    gap: 4em;
+.nav-links {
+  display: flex;
+  padding-top: 1em;
+  justify-content: center;
+  align-items: center;
+  gap: 4em;
 }
 
-.nav-links a{
-    font-family: "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: 620;
-    font-size: medium;
-    color: #242e4a;
-    text-decoration: none;
-    transition: color 0.3s;
+.nav-links a {
+  font-family: "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 620;
+  font-size: medium;
+  color: #242e4a;
+  text-decoration: none;
+  transition: color 0.3s;
 
-    :hover{
-        color: #2b344d;
-        cursor: pointer;
-    }
+  :hover {
+    color: #2b344d;
+    cursor: pointer;
+  }
 }
 
-
-.btn{
-    display: flex;
-    padding-top: 1em;
+.btn {
+  display: flex;
+  padding-top: 1em;
 }
-.signup{
-    background-color: #4e76ff;
+.signup {
+  background-color: #4e76ff;
   color: #fefefe;
   border-radius: 30px;
   border-style: none;
   padding: 10px 30px;
   font-family: "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: small;
+
+    cursor: pointer;
+  
 }
