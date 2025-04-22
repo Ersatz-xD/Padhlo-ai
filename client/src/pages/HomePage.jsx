@@ -1,9 +1,13 @@
 import React from "react";
+import { useNavigate } from 'react-router-dom';
 import "./homepage.css";
 import arrowIcon from "../assets/arrow-circle-right.png";
 import studyGroup from "../assets/35020245_8262271.jpg";
 
 const HomePage = () => {
+
+  const navigate = useNavigate();
+
   return (
     <div>
       <div className="main-heading">
@@ -12,7 +16,10 @@ const HomePage = () => {
 
         <div className="go-to-about">
           <span className="about-btn">About Us</span>
-          <button className="arrow-btn">
+          <button className="arrow-btn" onClick={() =>{
+            const sec = document.getElementById('about-section');
+            sec?.scrollIntoView({behavior: 'smooth'})
+          }}>
             <img src={arrowIcon} alt="arrow icon" />
           </button>
         </div>
@@ -31,7 +38,7 @@ const HomePage = () => {
               <h4 className="light-text">Notes Helper</h4>
               <p className="lighter-text">Your Messy Notes - Made Meaningful</p>
               <div className="go-to-div">
-                <button className="go-to-btn-notes">Open it</button>
+                <button  className="go-to-btn-notes" onClick={() => navigate('/notes-page')}>Open it</button>
               </div>
             </div>
 
@@ -41,14 +48,14 @@ const HomePage = () => {
                 From Concepts to Questions — Instantly
               </p>
               <div className="go-to-div">
-                <button className="go-to-btn-quiz">Open it</button>
+                <button className="go-to-btn-quiz" onClick={() => navigate('/quiz-page')}>Open it</button>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="bottom-sec">
+      <div class="bottom-sec" id="about-section">
         <div class="about">
           <h2>About Padhlo AI</h2>
           <p>
