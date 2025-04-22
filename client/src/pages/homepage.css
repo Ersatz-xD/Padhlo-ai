@@ -1,0 +1,126 @@
+.text {
+  color: #242e4a;
+}
+
+.main-heading {
+  font-family: "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 2em;
+  display: block;
+  margin-top: 150px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.go-to-about {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.about-btn {
+  background-color: #4e76ff;
+  color: #fefefe;
+  border-radius: 30px;
+  border-style: none;
+  padding: 10px 30px;
+  font-family: "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: medium;
+}
+
+.arrow-btn {
+  background: none;
+  height: 32px;
+  width: 32px;
+  border-style: none;
+  cursor: pointer;
+}
+
+.study-group {
+  width: 650px;
+}
+
+.lower-part {
+  display: flex;
+  padding-top: 50px;
+}
+
+.right-lower {
+  display: flex;
+  flex-direction: column;
+  padding-top: 15px;
+  gap: 10px;
+}
+
+.go-to-notes {
+    background: linear-gradient(135deg, rgba(83, 102, 158, 0.85), rgba(112, 134, 206, 0.75), rgba(157, 191, 237, 0.6));
+
+  border-radius: 20px;
+  width: 450px;
+  height: 190px;
+
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+
+  display: flex;
+  flex-direction: column;
+}
+.go-to-quiz {
+    background: linear-gradient(135deg, rgba(116, 115, 126, 0.85), rgba(173, 143, 143, 0.75), rgba(247, 244, 242, 0.4));
+
+  border-radius: 20px;
+  width: 450px;
+  height: 190px;
+
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+
+  display: flex;
+  flex-direction: column;
+}
+
+.light-text {
+  color: #e6f1ff;
+  font-size: large;
+  padding-top: 30px;
+  padding-left: 40px;
+}
+
+.lighter-text {
+  color: #e6f1ff;
+  font-size: medium;
+  padding-left: 40px;
+  padding-top: 5px;
+}
+
+
+.go-to-btn-notes{
+    background-color: #e6f1ff;
+  color: #4e76ff;
+  border-radius: 30px;
+  border-style: none;
+  padding: 10px 30px;
+  width: 120px;
+  font-family: "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: medium;
+  cursor: pointer;
+}
+
+.go-to-btn-quiz{
+    background-color: #e6f1ff;
+  color: #ad8f8f;
+  border-radius: 30px;
+  border-style: none;
+  padding: 10px 30px;
+  width: 120px;
+  font-family: "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: medium;
+  cursor: pointer;
+}
+
+
+.go-to-div{
+    display: block;
+    
+  padding-left: 40px;
+  padding-top: 35px;
+}
