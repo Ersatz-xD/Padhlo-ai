@@ -1,6 +1,9 @@
 import HomePage from './pages/HomePage'
 import NotesPage from './pages/NotesPage'
 import QuizPage from './pages/QuizPage'
+import BookIcon from './assets/reading-book.png'
+import './app.css'
+
 import {
   createBrowserRouter,
   createRoutesFromElements,
@@ -13,10 +16,27 @@ import {
 // Create a layout to wrap your routes (navbar inside router)
 const RootLayout = () => (
   <div>
-    <nav style={{ display: 'flex', gap: '10px', marginBottom: '20px' }}>
-      <Link to="/">HomePage</Link>
-      <Link to="/notes-page">NotesPage</Link>
-      <Link to="/quiz-page">QuizPage</Link>
+    <nav className='navbar'>
+        <div className='logo'>
+          <img className= 'logo-icon' src={BookIcon} alt="Book Icon" />
+          <span className='logo-text'>Padhlo AI</span>
+        </div>
+        
+        <div className='nav-links'>
+
+          <a href="/">Home</a>
+          <a href="https://github.com/Ersatz-xD/Padhlo-ai">GitHub</a>
+          <a href="https://www.linkedin.com/in/ayaan-ahmed-khan-448600351">LinkedIn</a>
+          
+          <a href="/">Support</a>
+        </div>
+
+        <div className='btn'>
+        <button className='signup'>
+          Sign up
+        </button>
+        </div>
+        
     </nav>
     <Outlet />
   </div>
