@@ -1,0 +1,50 @@
+.main-parent{
+    font-family: "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #4e76ff;
+  font-size: 1em;
+  display: block;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  }
+
+.under-dev-container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 3em 2em;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 500px;
+  }
+  
+  .under-dev-heading {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+  }
+  
+  .under-dev-text {
+    font-size: 1em;
+    margin-bottom: 1.5em;
+    line-height: 1.6em;
+  }
+  
+  .under-dev-btn {
+    text-decoration: none;
+    background-color: #e6f1ff;
+    color: #4e76ff;
+    padding: 10px 25px;
+    border-radius: 30px;
+    font-size: medium;
+    transition: 0.3s ease;
+  }
+  
+  .under-dev-btn:hover {
+    background-color: #d8e6ff;
+  }
+
+ 
+  
