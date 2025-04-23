@@ -1,0 +1,53 @@
+.main-parent {
+  font-family: "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #4e76ff;
+  font-size: 1em;
+  display: block;
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.generated-notes {
+  display: flex;
+  flex-direction: column;
+  background: rgba(184, 203, 255, 0.5);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px); /* for Safari */
+
+  width: 80%;
+  border-radius: 20px;
+  font-size: small;
+  padding: 20px 30px;
+  gap: 12px;
+  box-shadow: 0 5px 50px rgba(46, 46, 46, 0.2);
+}
+
+.notes-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: flex-start;
+
+  background-color: #fefefe;
+  width: 100%;
+  height: fit-content;
+  border-radius: 20px;
+  border-style: none;
+  padding: 0.75em 1em;
+  box-sizing: border-box;
+}
+
+.notes-exp {
+  color: black;
+}
+
+.notes-heading {
+  font-size: large;
+  font-weight: 500;
+}
