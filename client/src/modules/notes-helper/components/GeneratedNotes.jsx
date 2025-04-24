@@ -1,14 +1,19 @@
 import React from "react";
+import ReactMarkdown from 'react-markdown';
 import "./generatednotes.css";
 
-const GeneratedNotes = () => {
+const GeneratedNotes = ( {explanation} ) => {
   return (
     <div className="main-parent">
       <div className="generated-notes">
         <p className="heading">Generated Notes</p>
         <div className="notes-box">
-          <p className="notes-heading">Your Topic</p>
-          <p className="notes-exp">Generated Notes will appear here..... </p>
+          {/* <p className="notes-heading">{topic}</p> */}
+          {/* <p className="notes-exp"> {explanation} </p> */}
+          <p className="notes-exp">
+          <ReactMarkdown >{explanation}</ReactMarkdown>
+          </p>
+          
         </div>
       </div>
     </div>
