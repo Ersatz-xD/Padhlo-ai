@@ -74,8 +74,13 @@
     padding: 10px 30px;
     font-family: "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: small;
+    transition: 0.3s ease;
   
       cursor: pointer;
     
 }
+
+#btn:hover{
+    background-color: #6186ff;
+  }
 
