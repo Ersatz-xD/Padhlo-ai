@@ -14,10 +14,10 @@ import {
   Outlet,
 } from 'react-router-dom'
 
-/* ============================
-   Root Layout (Shared layout)
-   Contains: Navbar + Outlet
-============================ */
+
+  //  Root Layout (Shared layout)
+  //  Contains: Navbar + Outlet
+
 const RootLayout = () => (
   <div>
     <nav className='navbar'>
@@ -43,9 +43,7 @@ const RootLayout = () => (
   </div>
 )
 
-/* ============================
-   Route Configuration
-============================ */
+//    Route Configuration
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<RootLayout />}>
@@ -56,9 +54,9 @@ const router = createBrowserRouter(
   )
 )
 
-/* ============================
-   Main App Component
-============================ */
+
+  //  Main App Component
+
 const App = () => <RouterProvider router={router} />
 
 export default App
