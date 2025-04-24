@@ -61,3 +61,20 @@
 .notes-exp li {
   margin-left: 0.5rem;
 }
+
+.copy-btn{
+  background-color: #4e76ff;
+  color: #fefefe;
+  border-radius: 30px;
+  border-style: none;
+  padding: 10px 30px;
+  font-family: "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: small;
+  cursor: pointer;
+  transition: 0.3s ease;
+
+}
+
+.copy-btn:hover{
+  background-color: #6186ff;
+}
