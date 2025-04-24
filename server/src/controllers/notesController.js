@@ -22,7 +22,7 @@ Topic: ${topic}
 Rough Notes: ${notes}
 Return a clear explanation with headings, bullet points, and simple language.`;
 
-    // ✅ Using your exact syntax:
+    
     const response = await genAi.models.generateContent({
       model: "gemini-2.0-flash", // or "gemini-1.5-pro", etc.
       contents: prompt,
