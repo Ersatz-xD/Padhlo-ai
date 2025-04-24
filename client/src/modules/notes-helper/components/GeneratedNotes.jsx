@@ -15,6 +15,7 @@ const GeneratedNotes = ( {explanation} ) => {
           </p>
           
         </div>
+        <button id="btn" >Copy To Clipboard</button>
       </div>
     </div>
   );
