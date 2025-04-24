@@ -7,12 +7,17 @@ import { getNotesFromAI } from '../api/notesHelper';
 const NotesPage = () => {
 
   const [generatedNotes, setGeneratedNotes] = useState([]);
+  const [loading, setLoading] = useState(false);
+
+
   const handleGeneratedNotes = async ( topic, roughNotes ) => {
 
+    setLoading(true);
     const explanation = await getNotesFromAI(topic, roughNotes);
 
     const newNote = {topic, explanation };
     setGeneratedNotes(prev => [newNote, ...prev]);
+    setLoading(false);
   };
     return (
       <div className="parent-div">
@@ -25,6 +30,10 @@ const NotesPage = () => {
       <div className="notes-generator-box">
       <NotesGeneratorBox onGenerate={handleGeneratedNotes}/>
       </div>
+
+      {loading && (
+        <div className="loader"></div>
+      )}
 
       <div className="generated-notes-box">
         {generatedNotes.map((note, index) => (
