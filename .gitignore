@@ -1,5 +1,5 @@
 # Node modules
-vite-project/node_modules/
+client/node_modules/
 server/node_modules/
 **/node_modules/
 
@@ -8,17 +8,17 @@ server/node_modules/
 npm-debug.log*
 
 # Build files
-vite-project/dist/
+client/dist/
 server/dist/
 
 # Environment variables
-vite-project/.env
-vite-project/.env.*
+client/.env
+client/.env.*
 server/.env
 server/.env.*
 
 # Vite cache
-vite-project/.vite/
+client/.vite/
 
 # OS files
 .DS_Store
