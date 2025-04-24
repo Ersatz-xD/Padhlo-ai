@@ -1,9 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import "./notespage.css";
 import NotesGeneratorBox from "../modules/notes-helper/components/NotesGeneratorBox";
 import GeneratedNotes from "../modules/notes-helper/components/GeneratedNotes";
+import { getNotesFromAI } from '../api/notesHelper'; 
 
 const NotesPage = () => {
+
+  const [generatedNotes, setGeneratedNotes] = useState([]);
+  const handleGeneratedNotes = async ( topic, roughNotes ) => {
+
+    const explanation = await getNotesFromAI(topic, roughNotes);
+
+    const newNote = {topic, explanation };
+    setGeneratedNotes(prev => [newNote, ...prev]);
+  };
     return (
       <div className="parent-div">
 
@@ -13,11 +23,14 @@ const NotesPage = () => {
       </div>
 
       <div className="notes-generator-box">
-      <NotesGeneratorBox />
+      <NotesGeneratorBox onGenerate={handleGeneratedNotes}/>
       </div>
 
       <div className="generated-notes-box">
-        <GeneratedNotes />
+        {generatedNotes.map((note, index) => (
+          <GeneratedNotes key={index} topic={note.topic} explanation={note.explanation}/>
+
+        ))}
       </div>
 
       </div>
