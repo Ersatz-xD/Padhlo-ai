@@ -1,5 +1,6 @@
 import { GoogleGenAI } from "@google/genai";
 import dotenv from "dotenv";
+import Note from '../models/Note.js';
 
 dotenv.config();
 
@@ -24,12 +25,22 @@ Return a clear explanation with headings, bullet points, and simple language.`;
 
     
     const response = await genAi.models.generateContent({
-      model: "gemini-2.0-flash", // or "gemini-1.5-pro", etc.
+      model: "gemini-2.0-flash", 
       contents: prompt,
     });
 
     const text = response.text;
-    res.json({ summary: text });
+    
+
+    // Save to MongoDB
+    const newNote = new Note({
+      topic: topic,
+      content: text,
+    });
+
+    const savedNote = await newNote.save();
+
+    res.status(201).json( {summary: text} );
 
   } catch (e) {
     console.error("Gemini API Error:", e);
@@ -37,4 +48,10 @@ Return a clear explanation with headings, bullet points, and simple language.`;
   }
 };
 
-export { generateSummary };
+
+const getAllNotes = async (req, res) => {
+  //we will implement this after making login and sign up...
+};
+
+
+export { generateSummary , getAllNotes };
