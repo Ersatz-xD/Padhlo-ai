@@ -1,10 +1,11 @@
-// App.jsx
-import './app.css'
-import BookIcon from './assets/reading-book.png'
+import "./app.css";
+import React, { useState } from "react";
+import BookIcon from "./assets/reading-book.png";
 
-import HomePage from './pages/HomePage'
-import NotesPage from './pages/NotesPage'
-import QuizPage from './pages/QuizPage'
+import HomePage from "./pages/HomePage";
+import NotesPage from "./pages/NotesPage";
+import QuizPage from "./pages/QuizPage";
+import Login from "./modules/users/components/Login";
 
 import {
   createBrowserRouter,
@@ -12,51 +13,91 @@ import {
   Route,
   RouterProvider,
   Outlet,
-} from 'react-router-dom'
+  Link,
+  useNavigate,
+  useLocation,
+} from "react-router-dom";
+import Signup from "./modules/users/components/signup";
 
+// Root Layout (Shared layout)
+// Contains: Navbar + Outlet
+const RootLayout = ({ isLoggedIn, setIsLoggedIn }) => {
+  const navigate = useNavigate(); // To navigate after login/logout
+  const location = useLocation();
 
-  //  Root Layout (Shared layout)
-  //  Contains: Navbar + Outlet
+  const handleLoginLogout = () => {
+    if (isLoggedIn) {
+      setIsLoggedIn(false);
+      navigate("/");
+    } else {
+      navigate("/login");
+    }
+  };
 
-const RootLayout = () => (
-  <div>
-    <nav className='navbar'>
-      <div className='logo'>
-        <img className='logo-icon' src={BookIcon} alt="Book Icon" />
-        <span className='logo-text'>Padhlo AI</span>
-      </div>
+  // if current page is /login or /signup, do not show btn
+  const hidebtn =
+    location.pathname === "/login" || location.pathname === "/signup";
 
-      <div className='nav-links'>
-        <a href="/">Home</a>
-        <a href="https://github.com/Ersatz-xD/Padhlo-ai" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <a href="https://www.linkedin.com/in/ayaan-ahmed-khan-448600351" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <a href="/">Support</a>
-      </div>
+  return (
+    <div>
+      <nav className="navbar">
+        <div className="logo">
+          <img className="logo-icon" src={BookIcon} alt="Book Icon" />
+          <span className="logo-text">Padhlo AI</span>
+        </div>
 
-      <div className='btn'>
-        <button className='signup'>Sign up</button>
-      </div>
-    </nav>
+        <div className="nav-links">
+          <Link to="/">Home</Link>
+          <Link
+            to="https://github.com/Ersatz-xD/Padhlo-ai"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </Link>
+          <Link
+            to="https://www.linkedin.com/in/ayaan-ahmed-khan-448600351"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+          </Link>
+          <Link to="/">Support</Link>
+        </div>
+        {!hidebtn && (
+          <div className="btn">
+            <button onClick={handleLoginLogout} className="login">
+              {isLoggedIn ? "Logout" : "Login"}
+            </button>
+          </div>
+        )}
+      </nav>
 
-    {/* This is where routed content appears */}
-    <Outlet />
-  </div>
-)
+      {/* This is where routed content appears */}
+      <Outlet />
+    </div>
+  );
+};
 
-//    Route Configuration
-const router = createBrowserRouter(
-  createRoutesFromElements(
-    <Route path="/" element={<RootLayout />}>
-      <Route index element={<HomePage />} />
-      <Route path="notes-page" element={<NotesPage />} />
-      <Route path="quiz-page" element={<QuizPage />} />
-    </Route>
-  )
-)
+// Main App Component
+const App = () => {
 
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-  //  Main App Component
+  // Route Configuration
+  const router = createBrowserRouter(
+    createRoutesFromElements(
+      <Route path="/" element={<RootLayout isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />}>
+        <Route index element={<HomePage />} />
+        <Route path="notes-page" element={<NotesPage />} />
+        <Route path="quiz-page" element={<QuizPage />} />
+        <Route path="login" element={<Login setIsLoggedIn={setIsLoggedIn} />} />
+        <Route path="signup" element={<Signup />} />
+      </Route>
+    )
+  );
 
-const App = () => <RouterProvider router={router} />
+  return <RouterProvider router={router} />;
+};
 
-export default App
+export default App;
