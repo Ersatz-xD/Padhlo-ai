@@ -57,7 +57,7 @@ const loginUser = async (req, res) => {
       return res.status(401).send({ message: "Invalid email or password!" });
     }
 
-    const token = User.generateAuthToken();
+    const token = user.generateAuthToken();
     res.status(200).send({ data: token, message: "Logged in successfully!" });
   } catch (error) {
     console.error(error);
