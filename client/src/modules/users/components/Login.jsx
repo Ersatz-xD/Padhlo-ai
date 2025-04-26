@@ -20,7 +20,7 @@ const Login = ({ setIsLoggedIn }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const url = 'http://localhost:5000/api/users/login';
+      const url = 'https://padhlo-ai-production.up.railway.app/api/users/login';
       const { data: res } = await axios.post(url, data);
       localStorage.setItem('token', res.token);
       localStorage.setItem("userId", res.userId);

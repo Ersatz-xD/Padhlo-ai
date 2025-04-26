@@ -22,7 +22,7 @@ const Signup = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const url = 'http://localhost:5000/api/users/signup';
+            const url = 'https://padhlo-ai-production.up.railway.app/api/users/signup';
             const {data: res} = await axios.post(url, data);
             navigate('/login')
             console.log(res.message);

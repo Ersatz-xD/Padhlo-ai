@@ -29,7 +29,7 @@ const NotesPage = () => {
       try {
         
         const response = await axios.get(
-          "http://localhost:5000/api/get-all-notes",
+          "https://padhlo-ai-production.up.railway.app/api/get-all-notes",
           {
             headers: { Authorization: `Bearer ${token}` },
           }
