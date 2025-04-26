@@ -11,7 +11,7 @@ const Login = ({ setIsLoggedIn }) => {
   const [error, setError] = useState('');
   const navigate = useNavigate();
 
-  const [loginSuccess, setLoginSuccess] = useState(false); // new flag
+  const [loginSuccess, setLoginSuccess] = useState(false); 
 
   const handleChange = ({ currentTarget: input }) => {
     setData({ ...data, [input.name]: input.value });
@@ -22,7 +22,10 @@ const Login = ({ setIsLoggedIn }) => {
     try {
       const url = 'http://localhost:5000/api/users/login';
       const { data: res } = await axios.post(url, data);
-      localStorage.setItem('token', res.data);
+      localStorage.setItem('token', res.token);
+      localStorage.setItem("userId", res.userId);
+      console.log('Login response:', res);
+
       localStorage.setItem('isLoggedIn', 'true');
       setIsLoggedIn(true); 
       setLoginSuccess(true);  // set flag to true after login
