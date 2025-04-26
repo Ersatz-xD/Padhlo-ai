@@ -6,7 +6,7 @@ import HomePage from "./pages/HomePage";
 import NotesPage from "./pages/NotesPage";
 import QuizPage from "./pages/QuizPage";
 import Login from "./modules/users/components/Login";
-import Signup from "./modules/users/components/signup";
+import Signup from "./modules/users/components/Signup";
 
 import {
   createBrowserRouter,
