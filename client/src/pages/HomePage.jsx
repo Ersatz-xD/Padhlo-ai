@@ -55,8 +55,8 @@ const HomePage = () => {
         </div>
       </div>
 
-      <div class="bottom-sec" id="about-section">
-        <div class="about">
+      <div className="bottom-sec" id="about-section">
+        <div className="about">
           <h2>About Padhlo AI</h2>
           <p>
             Padhlo AI is an educational web app designed to help students learn
@@ -68,7 +68,7 @@ const HomePage = () => {
           </p>
         </div>
 
-        <div class="creator">
+        <div className="creator">
           <h3>Made by</h3>
           <p>
             <strong>Ayaan Ahmed Khan</strong>
@@ -79,7 +79,7 @@ const HomePage = () => {
           </p>
         </div>
 
-        <div class="project-info">
+        <div className="project-info">
           <h3>Tech Stack</h3>
           <ul>
             <li>Frontend: React</li>

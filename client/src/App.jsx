@@ -1,11 +1,12 @@
 import "./app.css";
-import React, { useState } from "react";
+import React, { useState,  useEffect  } from "react";
 import BookIcon from "./assets/reading-book.png";
 
 import HomePage from "./pages/HomePage";
 import NotesPage from "./pages/NotesPage";
 import QuizPage from "./pages/QuizPage";
 import Login from "./modules/users/components/Login";
+import Signup from "./modules/users/components/signup";
 
 import {
   createBrowserRouter,
@@ -17,16 +18,24 @@ import {
   useNavigate,
   useLocation,
 } from "react-router-dom";
-import Signup from "./modules/users/components/signup";
 
 // Root Layout (Shared layout)
 // Contains: Navbar + Outlet
 const RootLayout = ({ isLoggedIn, setIsLoggedIn }) => {
-  const navigate = useNavigate(); // To navigate after login/logout
+  const navigate = useNavigate(); 
   const location = useLocation();
+
+  // NEW EFFECT — auto navigate after login
+  useEffect(() => {
+    if (isLoggedIn && (location.pathname === "/login" || location.pathname === "/signup")) {
+      navigate("/");
+    }
+  }, [isLoggedIn, location.pathname, navigate]);
 
   const handleLoginLogout = () => {
     if (isLoggedIn) {
+      localStorage.removeItem("isLoggedIn");
+      localStorage.removeItem("token");
       setIsLoggedIn(false);
       navigate("/");
     } else {
@@ -34,7 +43,6 @@ const RootLayout = ({ isLoggedIn, setIsLoggedIn }) => {
     }
   };
 
-  // if current page is /login or /signup, do not show btn
   const hidebtn =
     location.pathname === "/login" || location.pathname === "/signup";
 
@@ -64,6 +72,7 @@ const RootLayout = ({ isLoggedIn, setIsLoggedIn }) => {
           </Link>
           <Link to="/">Support</Link>
         </div>
+
         {!hidebtn && (
           <div className="btn">
             <button onClick={handleLoginLogout} className="login">
@@ -81,13 +90,19 @@ const RootLayout = ({ isLoggedIn, setIsLoggedIn }) => {
 
 // Main App Component
 const App = () => {
-
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(() => {
+    return localStorage.getItem("isLoggedIn") === "true";
+  });
 
   // Route Configuration
   const router = createBrowserRouter(
     createRoutesFromElements(
-      <Route path="/" element={<RootLayout isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />}>
+      <Route
+        path="/"
+        element={
+          <RootLayout isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
+        }
+      >
         <Route index element={<HomePage />} />
         <Route path="notes-page" element={<NotesPage />} />
         <Route path="quiz-page" element={<QuizPage />} />
