@@ -1,8 +1,15 @@
 .navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* high value so it stays above other content */
+  background-color: #fefefe;
+  
+
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1em 7em;
+  position: sticky;
 }
 
 .logo-text {
@@ -50,7 +57,7 @@
   display: flex;
   padding-top: 1em;
 }
-.signup {
+.login {
   background-color: #4e76ff;
   color: #fefefe;
   border-radius: 30px;
