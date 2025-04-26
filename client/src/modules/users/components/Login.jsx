@@ -1,6 +1,6 @@
 import './login.css';
 import React , { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 const Login = ({ setIsLoggedIn }) => {
@@ -10,6 +10,7 @@ const Login = ({ setIsLoggedIn }) => {
     });
 
     const [error, setError] = useState('');
+    const navigate = useNavigate();
 
 
     const handleChange = ({currentTarget: input}) => {
@@ -19,11 +20,11 @@ const Login = ({ setIsLoggedIn }) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const url = 'http://localhost:5000/api/users';
+            const url = 'http://localhost:5000/api/users/login';
             const {data: res} = await axios.post(url, data);
             localStorage.setItem('token', res.data);
             setIsLoggedIn(true);
-            window.location = '/';
+            navigate('/');
         } catch (error) {
             if(
                 error.response &&
