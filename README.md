@@ -110,6 +110,7 @@ Padhlo-ai/
 
 ## 🖼️ Project Preview
 
-> _Coming soon after Quiz Generator update!_
-
+- 🚀 **Click on it to watch full preview:**
+  
+  [![Neural Networks Explained](https://img.youtube.com/vi/cF5wYIU_dk0/0.jpg)](https://www.youtube.com/watch?v=cF5wYIU_dk0)
 ---
