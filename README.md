@@ -14,7 +14,7 @@ Built with the **MERN stack** (MongoDB, Express, React, Node.js) and deployed fo
 - 📖 **Notes Helper**:  
   Turn rough notes into clean, structured study material.
 
-- 🧠 **Quiz Generator** (Coming soon after semester):  
+- 🧠 **Quiz Generator** (Under Development):  
   Instantly create MCQs from any topic for quick practice.
 
 - 🔐 **Authentication**:  
