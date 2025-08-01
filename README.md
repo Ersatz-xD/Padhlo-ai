@@ -102,16 +102,26 @@ Padhlo-ai/
 
 ---
 
-## 🤝 Connect with Me
-
-- [GitHub](https://github.com/Ersatz-xD)
-- [LinkedIn](https://www.linkedin.com/in/ayaan-ahmed-khan-448600351)
-
----
-
 ## 🖼️ Project Preview
 
 - 🚀 **Click on it to watch full preview:**
   
   [![Neural Networks Explained](https://img.youtube.com/vi/cF5wYIU_dk0/0.jpg)](https://www.youtube.com/watch?v=cF5wYIU_dk0)
 ---
+
+## 🤝 Connect with Me
+
+<div align="center">
+  <a href="https://www.linkedin.com/in/ayaan-ahmed-khan-448600351/">
+    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white&border-radius=10" alt="LinkedIn" style="margin: 5px;"/>
+  </a>
+  <a href="mailto:aayan.shazim@gmail.com">
+    <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white&border-radius=10" alt="Email" style="margin: 5px;"/>
+  </a>
+  <a href="https://github.com/Ersatz-xD">
+    <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white&border-radius=10" alt="GitHub" style="margin: 5px;"/>
+  </a>
+</div>
+
+---
+
