@@ -123,10 +123,18 @@ Padhlo-ai/
   </a>
 </div>
 
+
 <div align="center" style="margin-top: 30px;">
+  
   <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="30">
   <strong style="font-size: 18px; color: #00D9FF;">Always open to interesting conversations and collaboration opportunities!</strong>
   <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="30">
+  
+</div>
+
+
+<div align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=120&section=footer&animation=twinkling" width="100%"/>
 </div>
 
 
